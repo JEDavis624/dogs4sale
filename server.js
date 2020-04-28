@@ -23,11 +23,13 @@ app.set("view engine", "handlebars");
 // Import routes and give the server access to them.
 var routes = require("./controllers/dogsController.js");
 
+// Creating Routes
+require("./routes/apiRoutes")(app);
+require("./routes/htmlRoutes")(app);
+
 app.use(routes);
 
-// Starts server
-db.sequelize.sync().then(function () {
-  app.listen(PORT, function () {
-    console.log('App listening on PORT ' + PORT);
-  });
+// Starts the server to begin listening
+app.listen(PORT, function(){
+  console.log(`App listening on Port ${PORT}!`);
 });
