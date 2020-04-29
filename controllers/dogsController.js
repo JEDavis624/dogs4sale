@@ -1,3 +1,12 @@
+var express = require('express');
+var router = express.Router();
+var Dog = require("../models/dog")
+
+router.post('/api/dogs', function(req, res){
+  console.log(req)
+  Dog.create()
+})
+
 router.delete("/api/dogs/:id", function(req, res) {
     var condition = "id = " + req.params.id;
   
