@@ -4,9 +4,9 @@
 
 <ul>
   {{#each dogs}}
-    {{#unless adopted}}
-      {{> dogs/dog-block adopted=true}}
-    {{/unless}}
+  {{#unless adopted}}
+  {{> dogs/dog-block adopted=true}}
+  {{/unless}}
   {{/each}}
 </ul>
 
@@ -14,9 +14,9 @@
 
 <ul>
   {{#each dogs}}
-    {{#if adopted}}
-      {{> dogs/dog-block adopted=false}}
-    {{/if}}
+  {{#if adopted}}
+  {{> dogs/dog-block adopted=false}}
+  {{/if}}
   {{/each}}
 </ul>
 

@@ -1,4 +1,4 @@
-var sequelize = require ('sequelize');
+var sequelize = require('sequelize');
 
 const Dog = sequelize.define('dog', {
   // attributes
